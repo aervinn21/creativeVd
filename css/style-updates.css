@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*para di magalaw kahit mag-set ng height width*/
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*pag kukunin color, call lang yung var()*/
+:root{
+    --primary: #FFA700;
+    --black: #2b2b2b;
+    --gray: #808080;
+    --white: #ffffff;
+}
+.container{
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+@media (min-width: 768px){
+    .container{
+        width: 100%;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.header{
+    background-color:var(--black);
+    padding: 1rem 0;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+}
+#spanLogo{
+    color: #FFA700;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin-right: 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+#updates{
+    color: var(--primary);
+}
+
+nav ul li a:hover{
+    color: var(--primary);
+}
+/*----------------Header Elements ends here----------------*/
+.trends__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.trends__info{
+    padding: 5rem 0;
+}
+.trends__info h1{
+    font-size: 35px;
+    color: var(--primary);
+}
+.trends__content ul{
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    margin: 1rem 0 2rem 0;
+}
+.trends__content #img{
+    margin-top: 3rem;
+}
+.trends__content ul li i,a{
+    margin-right: 1rem;
+    color: var(--black);
+}
+.trends__content h3{
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+.trends__content p{
+    margin-bottom: 1rem;
+}
+.trends__content a{
+    text-decoration: none;
+}
