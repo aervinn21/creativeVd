@@ -7,7 +7,7 @@
     <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./css/style-about.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,7 +19,7 @@
                     <img src="./img/logo.png" alt="">
                     <h2>Creative  <span id="spanLogo">Visual</span> Designs</h2>
                 </div>
-                <nav>
+                <nav class="nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a id="about" href="about.html">About</a></li>
@@ -28,20 +28,25 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="toggle__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
-    <section class="banner">
+    <section class="bannerAbout">
         <div class="container">
-            <div class="banner__wrapper">
-                <div class="banner__content">
+            <div class="bannerAbout__wrapper">
+                <div class="bannerAbout__content">
                     <p>Things you need to know</p>
                     <h1>About Me</h1>
                     <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo reiciendis dolores assumenda facilis expedita dignissimos quia repellat quibusdam! Laudantium sint incidunt, repudiandae veniam suscipit quod accusantium inventore voluptates eaque dolorum, expedita natus quibusdam recusandae delectus consectetur velit cumque soluta? <br> <br>
                     
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias libero aspernatur, illo qui harum iste voluptatum tempora dolores voluptate ipsam, rerum facilis odio consectetur soluta eaque atque quaerat provident blanditiis explicabo ea corrupti nisi? Voluptatum voluptatem, similique at molestiae esse veniam cum ab ipsum nobis veritatis excepturi magni dolore nesciunt!</p>
 
-                    <div class="banner__icons">
+                    <div class="bannerAbout__icons">
                         <a href="#" class=""><i class="fa-brands fa-facebook"></i></a>
                         <a href="#" class=""><i class="fa-brands fa-twitter"></i></a>
                         <a href="#" class=""><i class='fa-brands fa-instagram'></i></a>
@@ -129,5 +134,17 @@
             </div>
         </div>
     </footer>
+
+<script>
+
+    const nav = document.querySelector(".nav");
+    const toggleMenu = document.querySelector(".toggle__menu");
+
+    toggleMenu.addEventListener("click", ()=>{
+        toggleMenu.classList.toggle("open");
+        nav.classList.toggle("open");
+    });
+</script>
+
 </body>
 </html>
