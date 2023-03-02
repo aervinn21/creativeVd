@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 /*pag kukunin color, call lang yung var()*/
 :root{
@@ -36,6 +37,9 @@ body{
 .header{
     background-color:var(--black);
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 .header__wrapper{
     display: flex;
@@ -74,6 +78,9 @@ nav ul li a:hover{
     height: 0.2rem;
     width: 2rem;
     margin-bottom: 0.4rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease;
+    
 }
 .toggle__menu{
     cursor: pointer;
@@ -84,18 +91,19 @@ nav ul li a:hover{
         display: block;
     }
     nav.open ul{
-        left: 0;
+        right: -50%;
+        transition: 0.5s ease-in;
     }
     nav ul{
         display: block;
         position: absolute;
-        right: -100%;
-        top: 6.5rem;
+        right: -105%;
+        top: 6.6rem;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: var(--white);
-        
-        text-align: center;
+        text-align: left;
+        transition: 0.5s ease-in;
     }
     #Home{
         color: black;
@@ -105,6 +113,7 @@ nav ul li a:hover{
         color: black;
         width: 100%;
         padding: 1rem;
+        border-bottom: 1px solid gray;
     }
     nav ul li:hover{
         background-color: var(--primary);
@@ -112,12 +121,31 @@ nav ul li a:hover{
     nav ul li:hover a{
         color: var(--white);
     }
+    .toggle__menu.open span:nth-child(1){
+        transition: 0.5s ease;
+        transform: translate(-2px, 7.3px) rotate(45deg);
+    }
+    .toggle__menu.open span:nth-child(2){
+        opacity: 0;
+        transition: 0s;
+    }
+    .toggle__menu.open span:nth-child(3){
+        transition: 0.5s ease;
+        transform: translate(-2px, -12px) rotate(-45deg);
+    }
 }
 /*----------------Header Elements Ends Here---------------*/
 .banner{
     padding: 6rem 0;
 }
-
+@media (max-width: 998px){
+    .banner__wrapper{
+        flex-direction: column;
+    }
+    .banner img{
+        width: 100% !important;
+    }
+}
 .banner__wrapper{
     display: flex;
     align-items: center;
@@ -127,7 +155,7 @@ nav ul li a:hover{
     width: 40rem;
 }
 .banner__content h1{
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     color: var(--primary);
     line-height: 70px;
 }
@@ -156,11 +184,17 @@ nav ul li a:hover{
     background-color: var(--black);
     padding: 4rem 0;
 }
+
 .services__wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
     text-align: center;
+}
+@media (max-width: 768px){
+    .services__wrapper{
+        grid-template-columns: 1fr;
+    }
 }
 .services__content{
     padding: 1rem 2rem;
@@ -233,6 +267,14 @@ nav ul li a:hover{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: center;
+}
+@media (max-width: 768px){
+    .updates__wrapper{
+        grid-template-columns: 1fr;
+    }
+    .updates__content img{
+        margin: 0 auto;
+    }
 }
 .updates__content{
     width: 333px;
