@@ -191,11 +191,6 @@ nav ul li a:hover{
     grid-gap: 3rem;
     text-align: center;
 }
-@media (max-width: 768px){
-    .services__wrapper{
-        grid-template-columns: 1fr;
-    }
-}
 .services__content{
     padding: 1rem 2rem;
 }
@@ -227,6 +222,11 @@ nav ul li a:hover{
     box-shadow: 0 5px 5px 0px;
     
 }
+@media (max-width: 768px){
+    .services__wrapper{
+        grid-template-columns: 1fr;
+    }
+}
 /*----------------Services Elements Ends Here---------------*/
 .about{
     padding: 6rem 0;
@@ -249,6 +249,14 @@ nav ul li a:hover{
     text-align:justify;
     margin: 2.5rem 0;
 }
+@media (max-width: 768px){
+    .about__wrapper{
+        display: block;
+    }
+    .about__wrapper img{  
+        width: 80% !important;
+    }
+}
 /*----------------About Elements Ends Here---------------*/
 .updates{
     padding: 4rem 0  4rem 0;
@@ -268,14 +276,7 @@ nav ul li a:hover{
     grid-gap: 20px;
     align-items: center;
 }
-@media (max-width: 768px){
-    .updates__wrapper{
-        grid-template-columns: 1fr;
-    }
-    .updates__content img{
-        margin: 0 auto;
-    }
-}
+
 .updates__content{
     width: 333px;
     height: 450px;
@@ -305,6 +306,14 @@ nav ul li a:hover{
 }
 .updates__content a:hover{
     color: var(--black);
+}
+@media (max-width: 768px){
+    .updates__wrapper{
+        grid-template-columns: 1fr;
+    }
+    .updates__content{
+        margin: 0 auto;
+    }
 }
 /*----------------Updates Elements Ends Here---------------*/
 .contact{
@@ -352,6 +361,9 @@ nav ul li a:hover{
 }
 #footer_p{
     padding-left: 2rem;
+    color: var(--white);
+    opacity: 50%;
+    text-align: center;
 }
 .footer__icons i{
     font-size: 28px;
@@ -364,5 +376,10 @@ nav ul li a:hover{
 .footer__details{
     color: var(--white);
     opacity: 50%;
+}
+@media (max-width: 768px){
+    .footer__wrapper{
+        flex-direction: column;
+    }
 }
 /*----------------Footer Elements Ends Here---------------*/

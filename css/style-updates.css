@@ -194,6 +194,9 @@ nav ul li a:hover{
 }
 #footer_p{
     padding-left: 2rem;
+    color: var(--white);
+    opacity: 50%;
+    text-align: center;
 }
 .footer__icons i{
     font-size: 28px;
@@ -206,5 +209,10 @@ nav ul li a:hover{
 .footer__details{
     color: var(--white);
     opacity: 50%;
+}
+@media (max-width: 768px){
+    .footer__wrapper{
+        flex-direction: column;
+    }
 }
 /*----------------Footer Elements Ends Here---------------*/
